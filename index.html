@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>ToDos</h1>
+            <button id="modeIcon">
+            </button>
+        </div>
+        <form id="form">
+            <div class="mid">
+                <input type="text" id="search">
+                <button id="addTask">
+                    <span class="material-icons">
+                        post_add
+                    </span>
+                </button>
+                <button id="newTodo">
+                    <span class="material-icons">
+                        open_in_new
+                    </span>
+                </button>
+            </div>
+        </form>
+        <ul class="task-list" id="taskList">
+        </ul>
+        <div class="bot">
+            <p id="description"></p>
+            <p>Press Enter or click <span class="material-icons-outlined">
+                    post_add
+                </span> to add task || Click <span class="material-icons-outlined">
+                    open_in_new
+                </span> to make new Todo</p>
+            <p>Click on task to mark as checked</p>
+            <p>Click <span class="material-icons-outlined">
+                    edit
+                </span> to edit task || Click <span class="material-icons-outlined">
+                    delete
+                </span> to delete task</p>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

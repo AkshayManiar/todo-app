@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ea80fc;
+  --secondary-color: #fff;
+  --font: #000;
+  --shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme {
+  --primary-color: #000;
+  --secondary-color: #202125;
+  --font: #fff;
+  --shadow: 0 0 10px 5px #ea80fc;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  background-color: var(--secondary-color);
+  color: var(--font);
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+
+.top span {
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+  color: var(--font);
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mid input {
+  font-size: 1.25rem;
+  width: 65%;
+  border: none;
+  padding: 0.25rem 0.25rem;
+  border-radius: 3px;
+  font-family: inherit;
+  color: #000;
+  font-weight: bold;
+  outline: none;
+}
+
+input::placeholder {
+  color: #000;
+  opacity: 0.5;
+  font-family: inherit;
+}
+
+.top button,
+.mid button,
+.task-list li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mid button span {
+  font-size: 3rem;
+  color: var(--font);
+}
+
+.task-list {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+.task-list li {
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--font);
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-list li:first-child {
+  border-top: 1px solid var(--font);
+}
+
+.taskText {
+  cursor: pointer;
+  width: 80%;
+  margin: 0;
+}
+
+li button span {
+  color: var(--font);
+}
+
+.taskText.marked {
+  text-decoration: line-through;
+  color: var(--font);
+}
+
+.bot {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.bot span {
+  font-size: 0.8rem;
+}
+
+.bot p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+  border: none;
+  outline: none;
+  background-color: var(--secondary-color);
+}
+
+#modeIcon.active {
+  transform: rotate(540deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+#modeIcon.inactive {
+  transform: rotate(0deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+@media (max-width: 375px) {
+  .mid input {
+    width: 70%;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
+  }
+
+  .mid button span {
+    font-size: 2.5rem;
+  }
+}
