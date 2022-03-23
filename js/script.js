@@ -76,7 +76,6 @@ function addNewTask(task) {
   if (task.task) {
     tasktext = task.task;
   }
-  console.log(tasktext);
   const taskEle = document.createElement("li");
   taskEle.innerHTML = `
   <p class="taskText">${tasktext}</p>
@@ -104,7 +103,6 @@ function addNewTask(task) {
       if (text.contentEditable == "true") {
         text.contentEditable = "false";
         if (text.innerText.length > 0) {
-          console.log("done");
           updateLS();
         } else {
           taskEle.remove();
@@ -129,7 +127,6 @@ function addNewTask(task) {
         text.classList.remove("marked");
       } else {
         text.classList.add("marked");
-        console.log("lol");
       }
     }
     updateLS();
